@@ -93,7 +93,7 @@ public class Ejercicio1 extends JFrame {
 				boolean valid_cod = Alumno.es_numero(textCodigo.getText());
 				
 				if (valid_cod == false) {
-					JOptionPane.showMessageDialog(null, "El cel es incorrecto"); 
+					JOptionPane.showMessageDialog(null, "El codigo es incorrecto"); 
 					return;
 				}
 				
