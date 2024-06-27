@@ -75,10 +75,36 @@ public class Ejercicio_01 extends JFrame {
 					imprimir("lista Edad["+i+"]->"+listaEdades[i]);
 				}
 				edades.adiciona(48);
+				imprimir("-------------------------------------");
+				for (int i = 0; i < listaEdades.length; i++) {
+					imprimir("lista Edad["+i+"]->"+listaEdades[i]);
+				}
+				imprimir("-------------------------------------");
+				
 				int primeraedadAdul = edades.primeraEdadAdulta();
 				int mayorEdad = edades.edadMayor();
 				imprimir("La primera edad adulta es: "+primeraedadAdul);
 				imprimir("La mayor edad es: "+mayorEdad);
+				imprimir("La posición del número buscado es:"+edades.buscar(48));
+				
+				imprimir("-------------------------------------");
+				edades.intercambiar(1, 3);
+				for (int i = 0; i < listaEdades.length; i++) {
+					imprimir("lista Edad["+i+"]->"+listaEdades[i]);
+				}
+				imprimir("-------------------------------------");
+				
+				edades.buscarAdicionar(25);
+				for (int i = 0; i < listaEdades.length; i++) {
+					imprimir("lista Edad["+i+"]->"+listaEdades[i]);
+				}
+				imprimir("-------------------------------------");
+				
+				edades.trasladar();
+				for (int i = 0; i < listaEdades.length; i++) {
+					imprimir("lista Edad["+i+"]->"+listaEdades[i]);
+				}
+				imprimir("-------------------------------------");
 			}
 		});
 		btnProcesar.setBounds(130, 40, 89, 23);

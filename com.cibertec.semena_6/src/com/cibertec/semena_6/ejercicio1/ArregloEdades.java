@@ -44,6 +44,14 @@ public class ArregloEdades {
 		
 	}
 	
+	public void adiciona(int edad2, int pos) {
+		if (indice == edad.length) {
+			ampliar();
+		}
+		edad[pos]= edad2;
+		
+	}
+	
 	public void eliminarFinal() {
 		indice --;
 		
@@ -93,10 +101,42 @@ public class ArregloEdades {
 		}
 	}
 	
+	public int buscar(int numero) {
+		for (int i = 0; i < edad.length; i++) {
+			if (edad[i]==numero) {
+				return i;
+				
+			}
+		}return -1;
+	}
 	
+	public void intercambiar(int pos1, int pos2) {
+		int aux = edad[pos1];
+		edad[pos1] = edad[pos2];
+		edad[pos2]= aux;
+	}
+	 
+	public void buscarAdicionar( int numero) {
+		
+		int num = buscar(numero);
+		if (num == -1) {
+			int posivacia =buscarPocicionVacia();
+			adiciona(numero,posivacia);
+		}
+	}
 	
+	public int buscarPocicionVacia(){
+		for (int i = 0; i < edad.length; i++) {
+			if (edad[i]==0) {
+				return i;
+			}
+			
+		}return -1;
+	}
 	
-	
-	
+	public void trasladar() {
+		int posf = buscarPocicionVacia();
+		intercambiar(0, posf);
+	}
 }
 

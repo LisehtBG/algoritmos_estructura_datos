@@ -82,6 +82,7 @@ public class Ejemplo1 extends JFrame {
 		JButton btnNewButton_1 = new JButton("Procesar");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
 				imprimirGeneral("El promedio general es: "+alum.promedioGeneral());
 				imprimirGeneral(" El promedio mayor es: " + alum.promedioMayor().getNombre() + "Cuyo promedio es: "+alum.promedioMayor().promedio());
 			}
